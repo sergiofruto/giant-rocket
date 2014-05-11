@@ -1,5 +1,5 @@
 /* Header */
-#head { background:#181015 url( ../images/wallpaper-cube.png) 0px -220px no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+#head { background:#181015 url( ../images/space.jpg) 0px -264px no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:190px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
 	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:44px; margin-bottom:6px; color:white; line-height:1.15em; } 
 	#head .tagline { color:rgba(255,255,255,0.75); margin-bottom:25px; }
@@ -10,11 +10,13 @@
 		#head .btn-default:focus { color:rgba(255,255,255,.8); -webkit-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); -moz-box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); box-shadow:inset 0px 0px 0px 3px rgba(255,255,255,.8); background: transparent; }
 		#head .btn-default:active, 
 		#head .btn-default.active { color:#fff; -webkit-box-shadow:inset 0px 0px 0px 3px #fff; -moz-box-shadow:inset 0px 0px 0px 3px #fff; box-shadow:inset 0px 0px 0px 3px #fff; background: transparent; }
-
+#head img.header-logo{ max-width: 15%;}
 /*navbar fix*/
 .nav.navbar-nav.pull-right{
 	padding-top: 13px;
+	font-size: 16px;
 }
+
 .fa.fa-rocket.fa-4{
 	font-size: 2.4em;
 }
@@ -34,7 +36,7 @@
 /* Highlights (in jumbotron in most cases) */
 .highlight { margin-top:40px; }
 	.h-caption { text-align: center; } 
-	.h-caption i { display:block; font-size: 54px; color:#382526; margin-bottom:14px; }
+	.h-caption i { display:block; font-size: 60px; color:#382526; margin-bottom:14px; }
 	.h-caption h4 { color:#382526; font-size: 16px; font-weight: bold; margin-bottom:20px; }
 	.h-body { }
 
@@ -65,10 +67,31 @@ img.pull-left { margin-right: 10px; }
 /* Main content block */
 .maincontent { }
 
+
+/* Teams content block */
+.container.team-container h2{
+	margin-bottom: 46px;
+}
+
+.row.team-row{
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.btn-action, .btn-primary{
+	background: #2980b9;
+}
+
 /* Sidebars */
 .sidebar { padding-top:36px; padding-bottom:30px; }
 	.sidebar .widget { margin-bottom:20px; }
 	.sidebar h1, .sidebar .h1, .sidebar h2, .sidebar .h2, .sidebar h3, .sidebar .h3 { margin-top:20px; } 
+
+
+.event-detail-box p { color:#333; }
+
+.event-detail-box:hover h4, .event-detail-box:hover .fa-5{ color: #2980b9; }
+
 
 /* Footer */
 .footer1 { background: #232323; padding: 30px 0 0 0; font-size: 12px; color: #999; }
