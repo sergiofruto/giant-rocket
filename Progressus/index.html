@@ -26,11 +26,10 @@
 </head>
 
 <body class="home">
-	<!-- Fixed navbar -->
+	<!-- Fixed navbar
 	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
 		<div class="container">
 			<div class="navbar-header">
-				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 				<a class="navbar-brand" href="index.html"><i class="fa fa-rocket fa-4"></i></a>
 			</div>
@@ -40,10 +39,10 @@
 					<li><a href="about.html">Equipos</a></li>
 					<li><a href="contact.html">Contacto</a></li>
 				</ul>
-			</div><!--/.nav-collapse -->
+			</div>
 		</div>
 	</div> 
-	<!-- /.navbar -->
+	-->
 
 	<!-- Header -->
 	<header id="head">
@@ -75,7 +74,7 @@
 			<h3 class="text-center thin">Detalles del Evento</h3>
 			
 			<div class="row">
-				<a href="#" class="event-detail-box">
+				<a href="#map-section" class="event-detail-box">
 					<div class="col-md-3 col-sm-6 highlight">
 						<div class="h-caption"><h4><i class="fa fa-map-marker fa-5"></i>Lugar y Fecha</h4></div>
 						<div class="h-body text-center">
@@ -83,7 +82,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="#" class="event-detail-box">	
+				<a href="#fixture-section" class="event-detail-box">	
 					<div class="col-md-3 col-sm-6 highlight">
 						<div class="h-caption"><h4><i class="fa fa-sitemap fa-5"></i>Fixture</h4></div>
 						<div class="h-body text-center">
@@ -91,7 +90,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="#" class="event-detail-box">
+				<a href="#team-section" class="event-detail-box">
 					<div class="col-md-3 col-sm-6 highlight">
 						<div class="h-caption"><h4><i class="fa fa-users fa-5"></i>Equipos</h4></div>
 						<div class="h-body text-center">
@@ -112,10 +111,31 @@
 		</div>
 	</div>
 	<!-- /Highlights -->
+	<!-- Map -->
+	<div class="container">
+		<div class="row">
+			<a name="map-section" class="reset-anchor"><h2 class="text-center top-space map-header">Lugar y Fecha</h2></a>
+			<div class="col-sm-6">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.9019997262462!2d-58.43235621534652!3d-34.58134618174284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb591c1d7fb83%3A0x70bb5ba86148ab79!2sFitz+Roy+2021!5e0!3m2!1ses-419!2sar!4v1399848586563" width="400" height="300" frameborder="0" style="border:0"></iframe>
+			</div>
+			<div class="col-sm-6">
+				<p>El torneo tendra una modalidad online en su primera ronda que se jugará del 02/06 al 05/06 y LAN pra la semifinal/final que se jugará en Tecnobar (Ver Mapa) sera 06/06 y 08/08.</p>
+			</div>
+		</div>
+	</div>
+	<!-- fixture -->
+	<div class="jumbotron top-space">
+		<div class="container">
+			<a name="fixture-section" class="reset-anchor"><h3 class="text-center thin">Fixture</h3></a>
+			<div class="col-sm-12">
+				<div class="demo_iframe"></div>
+			</div>
+		</div>
+	</div>
 
 	<!-- container -->
 	<div class="container team-container">
-		<h2 class="text-center top-space">Los Equipos</h2>
+		<a name="team-section" class="reset-anchor"><h2 class="text-center top-space">Los Equipos</h2></a>
 		<br>
 
 		<div class="row team-row">

@@ -82,6 +82,15 @@ img.pull-left { margin-right: 10px; }
 	background: #2980b9;
 }
 
+h2.map-header{
+	margin-bottom: 60px; 
+}
+
+a.reset-anchor{
+	color: #333;
+	text-decoration: none;
+}
+
 /* Sidebars */
 .sidebar { padding-top:36px; padding-bottom:30px; }
 	.sidebar .widget { margin-bottom:20px; }
