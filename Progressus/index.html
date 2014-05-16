@@ -166,34 +166,31 @@
 		</h3>
 		<div class="row team-row">
 			<div class="col-sm-3" id="gorgonPic">
-				<img id="toShowGorgon" src="http://i.imgur.com/w4Ebita.jpg"
+				<img class="imgToShow" src="http://i.imgur.com/w4Ebita.jpg"
 					width='200' height='200' /> <img id="toHideGorgon"
-					src="http://i.imgur.com/bEbm8F0.png"
-					width='200' height='200' />
+					class="imgToHide" src="http://i.imgur.com/bEbm8F0.png" width='200'
+					height='200' />
 				<h3>Gorgon Team</h3>
 			</div>
 
 			<div class="col-sm-3" id="grossuPic">
-				<img id="toShowGrossu" src="http://i.imgur.com/biAixhp.jpg"
-					width='200' height='200' /> <img id="toHideGrossu"
-					src="http://i.imgur.com/YMMHC7w.png"
-					width='200' height='200' />
+				<img class="imgToShow" src="http://i.imgur.com/biAixhp.jpg"
+					width='200' height='200' /> <img class="imgToHide"
+					src="http://i.imgur.com/YMMHC7w.png" width='200' height='200' />
 				<h3>Grossu Gaming</h3>
 			</div>
 
 			<div class="col-sm-3" id="isurusPic">
-				<img id="toShowIsurus" src="http://i.imgur.com/v1phLmO.jpg"
-					width='200' height='200' /> <img id="toHideIsurus"
-					src="http://i.imgur.com/Ihyd1RT.png"
-					width='200' height='200' />
+				<img class="imgToShow" src="http://i.imgur.com/v1phLmO.jpg"
+					width='200' height='200' /> <img class="imgToHide"
+					src="http://i.imgur.com/Ihyd1RT.png" width='200' height='200' />
 				<h3>Isurus Gaming HyperX</h3>
 			</div>
 
 			<div class="col-sm-3" id="manaosPic">
-				<img id="toShowManaos" src="http://i.imgur.com/xwWK1Sg.jpg"
-					width='200' height='200' /> <img id="toHideManaos"
-					src="http://i.imgur.com/IkakbUA.png"
-					width='200' height='200' />
+				<img class="imgToShow" src="http://i.imgur.com/xwWK1Sg.jpg"
+					width='200' height='200' /> <img class="imgToHide"
+					src="http://i.imgur.com/IkakbUA.png" width='200' height='200' />
 				<h3>Manaos S.A</h3>
 			</div>
 		</div>
@@ -201,34 +198,30 @@
 
 		<div class="row team-row">
 			<div class="col-sm-3" id="stillPic">
-				<img id="toShowStill" src="http://i.imgur.com/vJudUrs.jpg"
-					width='200' height='200' /> <img id="toHideStill"
-					src="http://i.imgur.com/36ygzxn.png"
-					width='200' height='200' />
+				<img class="imgToShow" src="http://i.imgur.com/vJudUrs.jpg"
+					width='200' height='200' /> <img class="imgToHide"
+					src="http://i.imgur.com/36ygzxn.png" width='200' height='200' />
 				<h3>Still Alive</h3>
 			</div>
 
 			<div class="col-sm-3" id="squirtlePic">
-				<img id="toShowSquirtle" src="http://i.imgur.com/2HTb1eZ.jpg"
-					width='200' height='200' /> <img id="toHideSquirtle"
-					src="http://i.imgur.com/nhaR0zM.png"
-					width='200' height='200' />
+				<img class="imgToShow" src="http://i.imgur.com/2HTb1eZ.jpg"
+					width='200' height='200' /> <img class="imgToHide"
+					src="http://i.imgur.com/nhaR0zM.png" width='200' height='200' />
 				<h3>Squirtle Squad!</h3>
 			</div>
 
 			<div class="col-sm-3" id="playPic">
-				<img id="toShowPlay" src="http://i.imgur.com/Z0fx63q.jpg"
-					width='200' height='200' /> <img id="toHidePlay"
-					src="http://i.imgur.com/nqzyB5G.png"
-					width='200' height='200' />
+				<img class="imgToShow" src="http://i.imgur.com/Z0fx63q.jpg"
+					width='200' height='200' /> <img class="imgToHide"
+					src="http://i.imgur.com/nqzyB5G.png" width='200' height='200' />
 				<h3>Team Play me Sexy</h3>
 			</div>
 
 			<div class="col-sm-3" id="womenPic">
-				<img id="toShowWomen" src="http://i.imgur.com/nB6U22P.jpg"
-					width='200' height='200' /> <img id="toHideWomen"
-					src="http://i.imgur.com/EFXHhU4.png"
-					width='200' height='200' />
+				<img class="imgToShow" src="http://i.imgur.com/nB6U22P.jpg"
+					width='200' height='200' /> <img class="imgToHide"
+					src="http://i.imgur.com/EFXHhU4.png" width='200' height='200' />
 				<h3>Women Doto Best Doto</h3>
 			</div>
 		</div>
@@ -337,112 +330,70 @@
 	<script src="assets/js/template.js"></script>
 	<script>
 		$(document).ready(function() {
-			$('#toHideGorgon').hide();
-			$('#toHideGrossu').hide();
-			$('#toHideIsurus').hide();
-			$('#toHideManaos').hide();
-			$('#toHideStill').hide();
-			$('#toHideSquirtle').hide();
-			$('#toHidePlay').hide();
-			$('#toHideWomen').hide();
+			$(".imgToHide").hide();
+
+			function hoverIn(divID) {
+				$(divID + " .imgToShow").stop().fadeTo('slow', 0.5);
+				$(divID + " .imgToHide").stop().fadeTo('slow', 1);
+				$(divID + " .imgToHide").show();
+				$(divID + " .imgToShow").hide();
+			}
+
+			function hoverOut(divID) {
+				$(divID + " .imgToShow").stop().fadeTo('slow', 1);
+				$(divID + " .imgToHide").stop().fadeTo('slow', 0.5);
+				$(divID + " .imgToHide").hide();
+				$(divID + " .imgToShow").show();
+			}
 
 			//When the Image is hovered upon, show the hidden div using Mouseover
 			$('#gorgonPic').hover(function() {
-				$('#toShowGorgon').stop().fadeTo('slow', 0.5);
-				$('#toHideGorgon').stop().fadeTo('slow', 1);
-				$('#toHideGorgon').show();
-				$('#toShowGorgon').hide();
+				hoverIn("#gorgonPic");
 			}, function() {
-				$('#toShowGorgon').stop().fadeTo('slow', 1);
-				$('#toHideGorgon').stop().fadeTo('slow', 0.5);
-				$('#toHideGorgon').hide();
-				$('#toShowGorgon').show();
+				hoverOut("#gorgonPic");
 			});
 
 			$('#grossuPic').hover(function() {
-				$('#toShowGrossu').stop().fadeTo('slow', 0.5);
-				$('#toHideGrossu').stop().fadeTo('slow', 1);
-				$('#toHideGrossu').show();
-				$('#toShowGrossu').hide();
+				hoverIn("#grossuPic");
 			}, function() {
-				$('#toShowGrossu').stop().fadeTo('slow', 1);
-				$('#toHideGrossu').stop().fadeTo('slow', 0.5);
-				$('#toHideGrossu').hide();
-				$('#toShowGrossu').show();
+				hoverOut("#grossuPic");
 			});
 
 			$('#isurusPic').hover(function() {
-				$('#toShowIsurus').stop().fadeTo('slow', 0.5);
-				$('#toHideIsurus').stop().fadeTo('slow', 1);
-				$('#toHideIsurus').show();
-				$('#toShowIsurus').hide();
+				hoverIn("#isurusPic");
 			}, function() {
-				$('#toShowIsurus').stop().fadeTo('slow', 1);
-				$('#toHideIsurus').stop().fadeTo('slow', 0.5);
-				$('#toHideIsurus').hide();
-				$('#toShowIsurus').show();
+				hoverOut("#isurusPic");
 			});
 
 			$('#manaosPic').hover(function() {
-				$('#toShowManaos').stop().fadeTo('slow', 0.5);
-				$('#toHideManaos').stop().fadeTo('slow', 1);
-				$('#toHideManaos').show();
-				$('#toShowManaos').hide();
+				hoverIn("#manaosPic");
 			}, function() {
-				$('#toShowManaos').stop().fadeTo('slow', 1);
-				$('#toHideManaos').stop().fadeTo('slow', 0.5);
-				$('#toHideManaos').hide();
-				$('#toShowManaos').show();
-			});	
+				hoverOut("#manaosPic");
+			});
 
 			$('#stillPic').hover(function() {
-				$('#toShowStill').stop().fadeTo('slow', 0.5);
-				$('#toHideStill').stop().fadeTo('slow', 1);
-				$('#toHideStill').show();
-				$('#toShowStill').hide();
+				hoverIn("#stillPic");
 			}, function() {
-				$('#toShowStill').stop().fadeTo('slow', 1);
-				$('#toHideStill').stop().fadeTo('slow', 0.5);
-				$('#toHideStill').hide();
-				$('#toShowStill').show();
+				hoverOut("#stillPic");
 			});
 
 			$('#squirtlePic').hover(function() {
-				$('#toShowSquirtle').stop().fadeTo('slow', 0.5);
-				$('#toHideSquirtle').stop().fadeTo('slow', 1);
-				$('#toHideSquirtle').show();
-				$('#toShowSquirtle').hide();
+				hoverIn("#squirtlePic");
 			}, function() {
-				$('#toShowSquirtle').stop().fadeTo('slow', 1);
-				$('#toHideSquirtle').stop().fadeTo('slow', 0.5);
-				$('#toHideSquirtle').hide();
-				$('#toShowSquirtle').show();
+				hoverOut("#squirtlePic");
 			});
 
 			$('#playPic').hover(function() {
-				$('#toShowPlay').stop().fadeTo('slow', 0.5);
-				$('#toHidePlay').stop().fadeTo('slow', 1);
-				$('#toHidePlay').show();
-				$('#toShowPlay').hide();
+				hoverIn("#playPic");
 			}, function() {
-				$('#toShowPlay').stop().fadeTo('slow', 1);
-				$('#toHidePlay').stop().fadeTo('slow', 0.5);
-				$('#toHidePlay').hide();
-				$('#toShowPlay').show();
+				hoverOut("#playPic");
 			});
 
 			$('#womenPic').hover(function() {
-				$('#toShowWomen').stop().fadeTo('slow', 0.5);
-				$('#toHideWomen').stop().fadeTo('slow', 1);
-				$('#toHideWomen').show();
-				$('#toShowWomen').hide();
+				hoverIn("#womenPic");
 			}, function() {
-				$('#toShowWomen').stop().fadeTo('slow', 1);
-				$('#toHideWomen').stop().fadeTo('slow', 0.5);
-				$('#toHideWomen').hide();
-				$('#toShowWomen').show();
+				hoverOut("#womenPic");
 			});
-
 
 		});
 	</script>
