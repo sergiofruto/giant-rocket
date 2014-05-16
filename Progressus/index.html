@@ -333,17 +333,17 @@
 			$(".imgToHide").hide();
 
 			function hoverIn(divID) {
-				$(divID + " .imgToShow").stop().fadeTo('slow', 0.5);
-				$(divID + " .imgToHide").stop().fadeTo('slow', 1);
+				$(divID + " .imgToShow").stop().css('opacity', .1).fadeTo('slow', 0.5);
+				$(divID + " .imgToHide").stop().css('opacity', .1).fadeTo('slow', 1);
 				$(divID + " .imgToHide").show();
 				$(divID + " .imgToShow").hide();
 			}
 
 			function hoverOut(divID) {
-				$(divID + " .imgToShow").stop().fadeTo('slow', 1);
-				$(divID + " .imgToHide").stop().fadeTo('slow', 0.5);
-				$(divID + " .imgToHide").hide();
+				$(divID + " .imgToShow").stop().css('opacity', .1).fadeTo('slow', 1);
+				$(divID + " .imgToHide").stop().css('opacity', .1).fadeTo('slow', 1);
 				$(divID + " .imgToShow").show();
+				$(divID + " .imgToHide").hide();
 			}
 
 			//When the Image is hovered upon, show the hidden div using Mouseover
