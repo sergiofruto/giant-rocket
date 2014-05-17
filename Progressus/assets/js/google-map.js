@@ -1,10 +1,11 @@
 google.maps.event.addDomListener(window, 'load', init);
 
 var map;
+var myLatlng = new google.maps.LatLng(-34.5815405,-58.4332789,17);
 
 function init() {
 	var mapOptions = {
-		center: new google.maps.LatLng(29.7063428,-95.40526,17),
+		center: new google.maps.LatLng(-34.5815405,-58.4332789,17),
 		zoom: 17,
 		zoomControl: true,
 		zoomControlOptions: {
@@ -34,7 +35,7 @@ function init() {
 			stylers: [
 			{ saturation: -100 },
 			{ lightness: 51 },
-			{ visibility: "simplified" }
+			{ visibility: "off" }
 			]
 		},{
 			featureType: "road.highway",
@@ -102,10 +103,24 @@ function init() {
 
 	var mapElement = document.getElementById('map');
 	var map = new google.maps.Map(mapElement, mapOptions);
-	var locations = [
-	
-	];
 
+
+	var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title:'TecnoBar'
+	});
+
+	var data = "Fitz Roy 2021";
+    var infowindow = new google.maps.InfoWindow({
+      content: data
+    });
+    
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+
+/*
 	for (i = 0; i < locations.length; i++) {
 		marker = new google.maps.Marker({
 			icon: '',
@@ -113,4 +128,5 @@ function init() {
 			map: map
 		});
 	}
+*/	
 }

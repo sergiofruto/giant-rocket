@@ -93,7 +93,7 @@
 					<div class="col-md-3 col-sm-6 highlight">
 						<div class="h-caption">
 							<h4>
-								<i class="fa fa-sitemap fa-5"></i>Fixture
+								<i class="fa fa-sitemap fa-5 fa-rotate-90"></i>Fixture
 							</h4>
 						</div>
 						<div class="h-body text-center">
@@ -134,7 +134,6 @@
 	</div>
 	<!-- /Highlights -->
 	<!-- Map -->
-
 	<div class="container">
 		<div class="row">
 			<a class="reset-anchor" name="map-section"></a>
@@ -144,17 +143,24 @@
 			</h3>
 
 			<div class="col-sm-6">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.886289770231!2d-58.43332181534423!3d-34.58174366467309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb591c1d7fb83%3A0x70bb5ba86148ab79!2sFitz+Roy+2021!5e0!3m2!1ses-419!2sar!4v1400086725723"
-					width="585" height="287" frameborder="0" style="border: 0"></iframe>
+				<div id="map"></div>
 			</div>
 
 			<div class="col-sm-6">
-				<img src="/assets/images/Fecha y Lugar.png">
+				<div class="schedule-info">
+					<h4>Etapa Online</h3>
+						<p>Isurus Gaming Hyper X vs Still Alive: Lunes 02/06 22:00hs</p>
+						<p>Grossu Gaming vs Manaos S.A: Martes 05/06 22:00hs</p>
+						<p>Gorgon Gaming vs Women Doto Best Doto: Miercoles 04/06 22:00hs</p>
+						<p>Play Me Sexy vs Squirtle Squad!: Jueves 06/06 22:00hs </p>
+					<h4>Etapa LAN</h3>
+						<p>Semifinal: Viernes 06/06 19:00hs - 24:00hs</p>
+						<p>3er y 4to puesto: 08/06 17:00hs</p>
+						<p>Gran Final: Domingo 08/06 al finalizar el match por el 3er y 4to puesto.</p>
+					</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!-- container -->
 
@@ -170,7 +176,7 @@
 					width='200' height='200' /> <img id="toHideGorgon"
 					class="imgToHide" src="http://i.imgur.com/bEbm8F0.png" width='200'
 					height='200' />
-				<h3>Gorgon Team</h3>
+				<h3>Gorgon Gaming</h3>
 			</div>
 
 			<div class="col-sm-3" id="grossuPic">
@@ -215,7 +221,7 @@
 				<img class="imgToShow" src="http://i.imgur.com/Z0fx63q.jpg"
 					width='200' height='200' /> <img class="imgToHide"
 					src="http://i.imgur.com/nqzyB5G.png" width='200' height='200' />
-				<h3>Team Play me Sexy</h3>
+				<h3>Play Me Sexy</h3>
 			</div>
 
 			<div class="col-sm-3" id="womenPic">
@@ -321,13 +327,15 @@
 		</div>
 	</footer>
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script
-		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
+	<!-- Google Maps -->
+	<script src="http://maps.googleapis.com/maps/api/js?v=3.14&(KEY=****)&sensor=false"></script>
+	<script src="assets/js/google-map.js"></script>
+
 	<script>
 		$(document).ready(function() {
 			$(".imgToHide").hide();
