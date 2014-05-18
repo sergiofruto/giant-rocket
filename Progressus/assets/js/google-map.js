@@ -110,16 +110,12 @@ function init() {
     map: map,
     title:'TecnoBar'
 	});
-
-	var data = "Fitz Roy 2021";
-    var infowindow = new google.maps.InfoWindow({
-      content: data
-    });
     
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map,marker);
-    });
+	var infowindow = new google.maps.InfoWindow({
+	  content:"Fitz Roy 2021"
+	  });
 
+	infowindow.open(map,marker);
 /*
 	for (i = 0; i < locations.length; i++) {
 		marker = new google.maps.Marker({
