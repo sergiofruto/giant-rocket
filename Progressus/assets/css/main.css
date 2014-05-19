@@ -126,6 +126,19 @@ a.reset-anchor{
 	padding-bottom: 10px;
 }
 
+.container p.tecnobar-info{
+	font-weight: bold;
+	color: #007CC2;
+}
+
+.container p.tecnobar-info a{
+	text-decoration: none;
+}
+
+.container p.tecnobar-info a:hover{
+	color: #1abc9c;
+}
+
 .container .schedule-info h4:first-child{ border-top: 0;}
 
 .container .schedule-info p{
