@@ -80,8 +80,9 @@ img.pull-left { margin-right: 10px; }
 	#social .wrapper { width:340px; margin:0 auto; }
 
 /* Main content block */
-.maincontent { }
-
+.container { 
+	margin-bottom: 40px;
+}
 
 /* Teams content block */
 .container.team-container h2{
@@ -152,21 +153,36 @@ a.reset-anchor{
 	margin: 0;
 }
 
-.prize-row .prize-list{
-	list-style: none;
-	max-width: 255px;
-	padding-top: 10px;
+.prize-row .col-sm-6 img{
+	display: block;
+	margin: 0 auto; 
+	padding-top: 50px;
+}
+
+.prize-row .col-sm-6 .prize-info{
+	display: block;
 	margin: 0 auto;
+	text-align: center;
+	width: 64%;
 }
 
-.prize-row .prize-list li{
-	padding-bottom: 10px;
+.prize-row .col-sm-6 .prize-info h3{
+	font-size: 17px;
+	font-weight: bold;
 }
 
-.prize-row .prize-list li.prize{
-	list-style: disc;
-	margin-left: 40px;
+.prize-row .col-sm-6 .prize-info p{
+	border-bottom: 1px solid #389EE2;
+	padding-bottom: 16px;
 }
+
+
+.prize-row .col-sm-12 .disclosure{
+	text-align: center;
+	padding-top: 32px;
+	font-size: 13px;
+}
+
 .map *, .map *:before, .map *:after {
     -webkit-transform: none !important; 
 }
@@ -183,6 +199,10 @@ a.reset-anchor{
 
 
 /* Footer */
+footer#footer .container {
+	margin-bottom: 0;
+}
+
 .footer1 { background: #232323; padding: 30px 0 0 0; font-size: 12px; color: #999; }
 	.footer1 a { color: #ccc; }
 		.footer1 a:hover {color: #fff; }
@@ -200,4 +220,19 @@ a.reset-anchor{
 		.footer2 p { margin: 0; }
 
 	.widget-simplenav { margin-left:-5px; }		
-	.widget-simplenav a{ margin:0 5px; }		
+	.widget-simplenav a{ margin:0 5px; }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+	.container{ margin-bottom: 30px;}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.container{ margin-bottom: 20px;}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+	.container{ margin-bottom: 20px;}
+	}		
