@@ -22,7 +22,14 @@
 		#head .btn-default:active, 
 		#head .btn-default.active { color:#fff; -webkit-box-shadow:inset 0px 0px 0px 3px #fff; -moz-box-shadow:inset 0px 0px 0px 3px #fff; box-shadow:inset 0px 0px 0px 3px #fff; background: transparent; }
 #head img.header-logo{ max-width: 15%;}
+
 /*navbar fix*/
+
+.navbar .container{
+	margin-bottom: 0px;
+}
+
+
 .nav.navbar-nav.pull-right{
 	padding-top: 13px;
 	font-size: 16px;
