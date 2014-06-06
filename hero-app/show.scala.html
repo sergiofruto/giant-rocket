@@ -9,7 +9,7 @@
 		<h1 id="player">GIANT ROCKET</h1>
 		<h2 id="team">TORNEO TECNOBAR</h2>
 		<div>
-			<img id="hero" src="imagen/default.jpg">
+			<img style="height: 900; width: 750;" id="hero" src="imagen/default.jpg">
 		</div>
 		</div>
 	</body>
@@ -21,7 +21,7 @@
 		$(document).ready(function() {
 			setInterval(function()
 					{ 
-					    $.ajax({
+					    $.ajax({	
 					      url:"http://localhost:9000/dota2/get/@machine",
 					      datatype:"html",
 					      success:function(data){
@@ -29,19 +29,19 @@
 					      		$("#player").text(data.player);
 					      	}
 					      	else{
-					      		$("#player").val("GIANT ROCKET");
+					      		$("#player").text("GIANT ROCKET");
 					      	}	
 					      	if (data.team != null && data.team != undefined) {
 					      		$("#team").text(data.team);
 					      	}
 					      	else{
-					      		$("#player").val("TORNEO TECNOBAR");
+					      		$("#player").text("TORNEO TECNOBAR");
 					      	}	
 
 					      	if (data.hero != null && data.hero != undefined) {
-					      		$("#hero").attr("src","imagen/"+data.hero+".jpg");
+					      		$("#hero").attr("src","http://cdn.dota2.com/apps/dota2/images/heroes/"+data.hero+"_vert.jpg");
 					      	}else{
-					      		$("#hero").attr("src","imagen/default.jpg");
+					      		$("#hero").attr("src","http://s3.amazonaws.com/37assets/svn/765-default-avatar.png");
 					      	} 
 					      }
 					    });
