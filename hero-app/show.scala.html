@@ -4,12 +4,16 @@
 @import helper.twitterBootstrap._
 @import play.i18n.Messages;
 <html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500' rel='stylesheet' type='text/css'>
+	</head>
 	<body>
 		<div>
 		<h1 id="player">GIANT ROCKET</h1>
 		<h2 id="team">TORNEO TECNOBAR</h2>
-		<div>
-			<img style="height: 900; width: 750;" id="hero" src="imagen/default.jpg">
+		<div class="image-container">
+			<img id="hero" src="AAWP.jpg">
 		</div>
 		</div>
 	</body>
@@ -22,7 +26,7 @@
 			setInterval(function()
 					{ 
 					    $.ajax({	
-					      url:"http://localhost:9000/dota2/get/@machine",
+					      url:"/hero-app/example.html",
 					      datatype:"html",
 					      success:function(data){
 					      	if (data.player != null && data.player != undefined) {
