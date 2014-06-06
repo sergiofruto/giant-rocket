@@ -1,0 +1,50 @@
+@(machine: String)
+
+@import helper._
+@import helper.twitterBootstrap._
+@import play.i18n.Messages;
+<html>
+	<body>
+		<div id="tuHermana">
+		<h1 id="player">DDX</h1>
+		<h2 id="team">ISURUS HYPER X</h2>
+		<div>
+			<img src="imagen/hero.jpg">
+		</div>
+		</div>
+	</body>
+		<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			setInterval(function()
+					{ 
+					    $.ajax({
+					      url:"http://localhost:9000/dota2/get/@machine",
+					      datatype:"html",
+					      success:function(data)
+					      {
+					      	if (data.player != null || != undefined) {
+					      		$("#player").val(data.player);
+					      	};
+					      	else{
+					      		$("#player").val("GIANT ROCKET");
+					      	}	
+					      	if (data.team != null || != undefined) {
+					      		$("#team").val(data.team);
+					      	};
+					      	else{
+					      		$("#player").val("TORNEO TECNOBAR");
+					      	}	
+
+					      	if (data.hero != null || != undefined) {
+					      		$("#hero").val(data.hero);
+					      	}; 
+					      }
+					    });
+					}, 3000);
+		});
+	</script>	    
+</html>
