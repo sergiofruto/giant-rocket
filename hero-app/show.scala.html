@@ -5,11 +5,11 @@
 @import play.i18n.Messages;
 <html>
 	<body>
-		<div id="tuHermana">
-		<h1 id="player">DDX</h1>
-		<h2 id="team">ISURUS HYPER X</h2>
 		<div>
-			<img src="imagen/hero.jpg">
+		<h1 id="player">GIANT ROCKET</h1>
+		<h2 id="team">TORNEO TECNOBAR</h2>
+		<div>
+			<img id="hero" src="imagen/default.jpg">
 		</div>
 		</div>
 	</body>
@@ -24,24 +24,25 @@
 					    $.ajax({
 					      url:"http://localhost:9000/dota2/get/@machine",
 					      datatype:"html",
-					      success:function(data)
-					      {
-					      	if (data.player != null || != undefined) {
-					      		$("#player").val(data.player);
-					      	};
+					      success:function(data){
+					      	if (data.player != null && data.player != undefined) {
+					      		$("#player").text(data.player);
+					      	}
 					      	else{
 					      		$("#player").val("GIANT ROCKET");
 					      	}	
-					      	if (data.team != null || != undefined) {
-					      		$("#team").val(data.team);
-					      	};
+					      	if (data.team != null && data.team != undefined) {
+					      		$("#team").text(data.team);
+					      	}
 					      	else{
 					      		$("#player").val("TORNEO TECNOBAR");
 					      	}	
 
-					      	if (data.hero != null || != undefined) {
-					      		$("#hero").val(data.hero);
-					      	}; 
+					      	if (data.hero != null && data.hero != undefined) {
+					      		$("#hero").attr("src","imagen/"+data.hero+".jpg");
+					      	}else{
+					      		$("#hero").attr("src","imagen/default.jpg");
+					      	} 
 					      }
 					    });
 					}, 3000);
